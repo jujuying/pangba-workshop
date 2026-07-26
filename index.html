@@ -661,10 +661,12 @@
         <a href="https://www.facebook.com/pangbashengong" target="_blank" class="fb-link">
           FB 私訊胖爸省工坊 →
         </a>
-        <div class="contact-form">
+        <form class="contact-form" method="POST" action="https://formspree.io/f/mojgpzbk">
+          <input type="hidden" name="_next" value="https://pangba-workshop-legyuog3f-jimmydev1.vercel.app/#contact" />
+          <input type="hidden" name="_subject" value="胖爸省工坊：新詢價" />
           <div class="form-row">
-            <label>你是做哪一行的？</label>
-            <select>
+            <label for="industry">你是做哪一行的？</label>
+            <select id="industry" name="industry" required>
               <option value="">請選擇</option>
               <option>餐飲 / 食品</option>
               <option>服務業</option>
@@ -675,18 +677,16 @@
             </select>
           </div>
           <div class="form-row">
-            <label>你現在遇到什麼問題？</label>
-            <textarea rows="4" placeholder="例如：每天要手動整理 Excel 報表，很煩但沒人幫我自動化⋯"></textarea>
+            <label for="problem">你現在遇到什麼問題？</label>
+            <textarea id="problem" name="problem" rows="4" placeholder="例如：每天要手動整理 Excel 報表，很煩但沒人幫我自動化⋯" required></textarea>
           </div>
           <div class="form-row">
-            <label>聯絡方式（email 或 LINE ID）</label>
-            <input type="text" placeholder="your@email.com 或 LINE ID" />
+            <label for="contact">聯絡方式（email 或 LINE ID）</label>
+            <input type="text" id="contact" name="contact" placeholder="your@email.com 或 LINE ID" required />
           </div>
-          <a href="https://www.facebook.com/pangbashengong" class="form-submit">
-            送出 → 24 小時內回覆
-          </a>
+          <button type="submit" class="form-submit">送出 → 24 小時內回覆</button>
           <p class="form-note">不會有垃圾推銷，只回覆有具體需求的詢問</p>
-        </div>
+        </form>
       </div>
     </div>
   </section>
