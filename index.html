@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>胖爸省工坊 — 幫你省人力、省時間、省麻煩的自動化夥伴</title>
+  <meta name="description" content="懂業務流程的一人自動化夥伴。單頁網站、系統串接、自動化機器人、數位化諮詢，幫中小企業把重複的事交給機器做。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#fff7ed',
+              100: '#ffedd5',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+            },
+            dark: '#1a1a2e',
+            card: '#16213e',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-text {
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-bg {
+      background: radial-gradient(ellipse at 20% 50%, rgba(249,115,22,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(251,146,60,0.05) 0%, transparent 50%),
+                  #0f0f23;
+    }
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(249,115,22,0.15);
+    }
+  </style>
+</head>
+<body class="bg-dark text-white font-sans">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 bg-dark/90 backdrop-blur-sm border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="font-black text-lg tracking-tight">
+        胖爸<span class="text-brand-500">省工坊</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-white/60">
+        <a href="#services" class="hover:text-white transition-colors">服務</a>
+        <a href="#portfolio" class="hover:text-white transition-colors">作品</a>
+        <a href="#about" class="hover:text-white transition-colors">關於</a>
+        <a href="#contact" class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+          聯絡詢價
+        </a>
+      </div>
+      <!-- Mobile CTA -->
+      <a href="#contact" class="md:hidden bg-brand-500 text-white px-4 py-2 rounded-lg text-sm font-medium">
+        詢價
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-5xl mx-auto px-6 py-24">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/20 rounded-full px-4 py-2 text-brand-400 text-sm font-medium mb-8">
+          <span class="w-2 h-2 bg-brand-500 rounded-full animate-pulse"></span>
+          接受詢價中
+        </div>
+        <h1 class="text-5xl md:text-6xl font-black leading-tight mb-6">
+          你懂你的生意，<br />
+          我懂怎麼讓它<br />
+          <span class="gradient-text">少一個人也能跑</span>
+        </h1>
+        <p class="text-xl text-white/60 leading-relaxed mb-10 max-w-xl">
+          胖爸省工坊 — 在製造業做了十年一人 MIS，懂業務流程，也懂把「業務問題」變成真正能省人力的系統。
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact"
+             class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors">
+            告訴我你的痛點 →
+          </a>
+          <a href="#portfolio"
+             class="border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-8 py-4 rounded-xl font-medium text-lg transition-colors">
+            看示範作品
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points -->
+  <section id="pain" class="py-24 bg-white/[0.02]">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-black mb-4">這些場景，你有沒有一個點頭的？</h2>
+      <p class="text-white/50 mb-12 text-lg">你不是一個人這樣——這是很多中小企業老闆每天的現實。</p>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-card rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="text-4xl mb-6">🔁</div>
+          <h3 class="font-bold text-lg mb-3">每天有幾件事，做了 100 次，還沒自動化</h3>
+          <p class="text-white/50 leading-relaxed">
+            簡單、不難、煩死人。沒人幫你寫，你就繼續做。
+            那些「重複的小事」，通常 2 週就能讓它消失。
+          </p>
+        </div>
+
+        <div class="bg-card rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="text-4xl mb-6">🔌</div>
+          <h3 class="font-bold text-lg mb-3">你有表單、有 ERP、有 LINE，但它們各說各話</h3>
+          <p class="text-white/50 leading-relaxed">
+            資料還在靠人工複製貼上。你不需要換掉現有系統，
+            只要讓它們學會互相溝通。
+          </p>
+        </div>
+
+        <div class="bg-card rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="text-4xl mb-6">💸</div>
+          <h3 class="font-bold text-lg mb-3">想要一個網頁，但報價讓你嚇一跳</h3>
+          <p class="text-white/50 leading-relaxed">
+            形象頁、活動頁、預約頁，你就是需要一個讓客人找到你的地方，
+            不需要複雜的系統，也不需要 3 萬起步。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-black mb-4">我能幫你做什麼</h2>
+      <p class="text-white/50 mb-12 text-lg">四條服務線，從快速上線到深度規劃，依你的需求選擇。</p>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="bg-card rounded-2xl p-8 border border-white/5 card-hover group">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="bg-brand-500/10 text-brand-400 text-2xl w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">🌐</div>
+            <div>
+              <div class="text-xs text-brand-400 font-medium mb-1 uppercase tracking-wider">入門首選</div>
+              <h3 class="font-black text-xl">7 天上線的單頁網站</h3>
+            </div>
+          </div>
+          <p class="text-white/60 leading-relaxed mb-5">
+            形象頁、活動頁、預約頁——讓你的客人有地方找到你。
+            你提供內容，我負責設計與上線，教你自己改文字。
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">形象頁</span>
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">活動頁</span>
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">預約頁</span>
+          </div>
+        </div>
+
+        <div class="bg-card rounded-2xl p-8 border border-white/5 card-hover group">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="bg-brand-500/10 text-brand-400 text-2xl w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">🔗</div>
+            <div>
+              <div class="text-xs text-brand-400 font-medium mb-1 uppercase tracking-wider">主力服務</div>
+              <h3 class="font-black text-xl">讓你的工具學會說話</h3>
+            </div>
+          </div>
+          <p class="text-white/60 leading-relaxed mb-5">
+            把現有的軟體、表單、系統串在一起，讓資料自己流動。
+            不用換系統，只要讓它們互相溝通。
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">Google Workspace</span>
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">LINE API</span>
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">ERP 串接</span>
+          </div>
+        </div>
+
+        <div class="bg-card rounded-2xl p-8 border border-white/5 card-hover group">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="bg-brand-500/10 text-brand-400 text-2xl w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">🤖</div>
+            <div>
+              <div class="text-xs text-brand-400 font-medium mb-1 uppercase tracking-wider">主力服務</div>
+              <h3 class="font-black text-xl">把重複作業交給機器做</h3>
+            </div>
+          </div>
+          <p class="text-white/60 leading-relaxed mb-5">
+            自動通知、自動報表、自動回覆——你最煩的那件重複小事，
+            通常 2 週就能讓它消失。付一次，跑很久。
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">LINE Bot</span>
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">報表自動化</span>
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">定時通知</span>
+          </div>
+        </div>
+
+        <div class="bg-card rounded-2xl p-8 border border-white/5 card-hover group">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="bg-brand-500/10 text-brand-400 text-2xl w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">🗺️</div>
+            <div>
+              <div class="text-xs text-brand-400 font-medium mb-1 uppercase tracking-wider">深度合作</div>
+              <h3 class="font-black text-xl">先搞清楚再動手</h3>
+            </div>
+          </div>
+          <p class="text-white/60 leading-relaxed mb-5">
+            知道要數位化但不知從哪開始？我幫你盤點現行流程，
+            找出最該先動的那個點，出書面建議報告，不賣你用不到的東西。
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">流程盤點</span>
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">優先序規劃</span>
+            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-white/50">書面報告</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-24 bg-white/[0.02]">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-black mb-4">示範作品</h2>
+      <p class="text-white/50 mb-12 text-lg">每個作品解決一個真實的業務問題，你可以直接點進去看效果。</p>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Portfolio placeholder cards -->
+        <div class="bg-card rounded-2xl p-8 border border-dashed border-white/10 text-center">
+          <div class="text-4xl mb-4">🔔</div>
+          <h3 class="font-bold mb-2">小店自動通知機器人</h3>
+          <p class="text-white/40 text-sm mb-4">Google 表單訂位 → LINE 自動通知</p>
+          <span class="text-xs text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full">製作中</span>
+        </div>
+
+        <div class="bg-card rounded-2xl p-8 border border-dashed border-white/10 text-center">
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="font-bold mb-2">烘焙工作室形象頁</h3>
+          <p class="text-white/40 text-sm mb-4">單頁網站示範，7 天交付流程</p>
+          <span class="text-xs text-white/30 bg-white/5 px-3 py-1 rounded-full">即將推出</span>
+        </div>
+
+        <div class="bg-card rounded-2xl p-8 border border-dashed border-white/10 text-center">
+          <div class="text-4xl mb-4">📄</div>
+          <h3 class="font-bold mb-2">報價單自動產生工具</h3>
+          <p class="text-white/40 text-sm mb-4">填表單 → 自動出 PDF 並寄信</p>
+          <span class="text-xs text-white/30 bg-white/5 px-3 py-1 rounded-full">即將推出</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-3xl font-black mb-6">為什麼是「胖爸」？</h2>
+          <div class="space-y-5 text-white/70 leading-relaxed text-lg">
+            <p>
+              我在製造業做了超過十年的「一人資訊主管」。
+              老闆說「我要這個系統」，從需求訪談、開發、部署、維運，全部一個人扛。
+            </p>
+            <p>
+              做過的系統包含：薪酬計算、採購追蹤、倉庫管理、跨系統串接、小型 AI 機器人。
+            </p>
+            <p>
+              我學到最重要的一件事：<strong class="text-white">老闆的問題不是「我需要一個系統」，
+              是「我需要這件事不再靠人工」。</strong>
+            </p>
+            <p>
+              胖爸省工坊，就是幫你把這件事做到。
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-card rounded-2xl p-6 border border-white/5">
+            <div class="text-2xl font-black text-brand-500 mb-1">10+ 年</div>
+            <div class="text-white/60">製造業一人 MIS 實戰經驗</div>
+          </div>
+          <div class="bg-card rounded-2xl p-6 border border-white/5">
+            <div class="text-2xl font-black text-brand-500 mb-1">全端交付</div>
+            <div class="text-white/60">後端 / 前端 / 資料庫 / 部署，一手包辦</div>
+          </div>
+          <div class="bg-card rounded-2xl p-6 border border-white/5">
+            <div class="text-2xl font-black text-brand-500 mb-1">遠端非同步</div>
+            <div class="text-white/60">文字溝通，不需要你配合我的時間</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 bg-white/[0.02]">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-black mb-4">告訴我你的煩惱</h2>
+      <p class="text-white/50 text-lg mb-10">
+        不一定要合作，先聊聊。我先聽你說「現在怎麼做、哪裡最痛」，
+        再告訴你有沒有更省力的方法。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="https://www.facebook.com/profile.php?id=胖爸省工坊"
+           target="_blank"
+           class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors flex items-center justify-center gap-2">
+          FB 私訊胖爸 →
+        </a>
+        <a href="#contact-form"
+           class="border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-8 py-4 rounded-xl font-medium text-lg transition-colors">
+          填表單詢價
+        </a>
+      </div>
+
+      <!-- Contact Form (Google Forms embed placeholder) -->
+      <div id="contact-form" class="bg-card rounded-2xl p-8 border border-white/5 text-left">
+        <h3 class="font-bold text-lg mb-6">詢價表單</h3>
+        <!-- TODO: 替換成實際的 Google 表單 iframe -->
+        <div class="space-y-5">
+          <div>
+            <label class="block text-white/60 text-sm mb-2">你是做哪一行的？</label>
+            <select class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:border-brand-500 focus:outline-none">
+              <option>餐飲/食品</option>
+              <option>服務業</option>
+              <option>貿易/進出口</option>
+              <option>製造業</option>
+              <option>零售/電商</option>
+              <option>其他</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-white/60 text-sm mb-2">你現在遇到什麼問題？</label>
+            <textarea rows="4"
+              placeholder="例如：每天要手動整理 Excel 報表，很煩但沒人幫我自動化⋯"
+              class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/20 focus:border-brand-500 focus:outline-none resize-none"></textarea>
+          </div>
+          <div>
+            <label class="block text-white/60 text-sm mb-2">聯絡方式（email 或 LINE ID）</label>
+            <input type="text" placeholder="your@email.com 或 LINE ID"
+              class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/20 focus:border-brand-500 focus:outline-none" />
+          </div>
+          <a href="https://www.facebook.com/messages"
+             class="block w-full bg-brand-500 hover:bg-brand-600 text-white py-4 rounded-xl font-bold text-center transition-colors">
+            送出 → 我會在 24 小時內回覆
+          </a>
+          <p class="text-white/30 text-sm text-center">送出後我會用 FB 或 email 回覆，不會有垃圾推銷</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-white/30 text-sm">
+      <span>胖爸省工坊 &copy; 2026</span>
+      <div class="flex gap-6">
+        <a href="https://www.facebook.com" target="_blank" class="hover:text-white/60 transition-colors">Facebook</a>
+        <a href="https://github.com/jujuying/pangba-workshop" target="_blank" class="hover:text-white/60 transition-colors">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
