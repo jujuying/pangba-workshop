@@ -389,6 +389,67 @@
       display: flex; justify-content: space-between; align-items: center;
       gap: 16px; flex-wrap: wrap;
     }
+    /* ── DEMO CARD ── */
+    .demo-card {
+      background: var(--cream);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 0;
+    }
+    .demo-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 24px;
+      margin-bottom: 32px; flex-wrap: wrap;
+    }
+    .demo-tag {
+      font-size: 0.78rem; font-weight: 700;
+      color: var(--terra); letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .demo-title {
+      font-size: 1.4rem; font-weight: 900;
+      color: var(--brown); margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .demo-desc {
+      font-size: 0.95rem; color: var(--brown-mid);
+      line-height: 1.7; max-width: 520px;
+    }
+    .demo-github {
+      display: inline-block; white-space: nowrap;
+      background: var(--brown); color: #fff;
+      padding: 10px 20px; border-radius: 10px;
+      font-size: 0.88rem; font-weight: 700;
+      text-decoration: none; transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .demo-github:hover { background: #4a3828; }
+    .demo-scenarios {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 20px; margin-bottom: 24px;
+    }
+    @media(max-width:600px){ .demo-scenarios { grid-template-columns: 1fr; } }
+    .demo-scene { text-align: center; }
+    .demo-scene img {
+      width: 100%; border-radius: 14px;
+      border: 1px solid var(--border);
+      margin-bottom: 10px;
+    }
+    .demo-scene-label {
+      font-size: 0.85rem; color: var(--brown-muted);
+      font-weight: 500;
+    }
+    .demo-stack {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .demo-stack span {
+      font-size: 0.78rem; font-weight: 700;
+      background: var(--beige); color: var(--brown-mid);
+      padding: 4px 12px; border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
     .footer-inner span, .footer-inner a {
       font-size: 0.85rem; color: var(--brown-muted); text-decoration: none;
     }
@@ -587,17 +648,41 @@
       <div class="section-label">示範作品</div>
       <h2>每個作品解決一個真實問題</h2>
       <p class="section-sub">可以直接點進去看效果，不是截圖。</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-card">
-          <div class="portfolio-img">
-            <img src="assets/img/scene3-notification.png" alt="小店自動通知機器人" />
+      <!-- Demo #1：完整展示 -->
+      <div class="demo-card">
+        <div class="demo-header">
+          <div>
+            <div class="demo-tag">自動化 / 系統串接</div>
+            <h3 class="demo-title">小店自動通知機器人</h3>
+            <p class="demo-desc">
+              顧客在電腦填完表單按送出，老闆的 LINE 馬上收到通知——不用一直盯著信箱，不會漏單。
+              適合餐廳、工作室、診所任何用 Google 表單收資料的場景。
+            </p>
           </div>
-          <div class="portfolio-body">
-            <div class="portfolio-title">小店自動通知機器人</div>
-            <div class="portfolio-desc">Google 表單訂位 → LINE 自動通知，適合餐廳、工作室、診所</div>
-            <span class="portfolio-badge">製作中</span>
+          <a href="https://github.com/jujuying/pangba-demo-line-notify" target="_blank" class="demo-github">
+            查看程式碼 →
+          </a>
+        </div>
+        <div class="demo-scenarios">
+          <div class="demo-scene">
+            <img src="assets/img/demo1-a-form.png" alt="顧客填表單，自動送進 LINE" />
+            <div class="demo-scene-label">顧客填表單，系統自動觸發</div>
+          </div>
+          <div class="demo-scene">
+            <img src="assets/img/demo1-b-line.png" alt="老闆收到 LINE 通知" />
+            <div class="demo-scene-label">老闆 LINE 即時收到顧客資訊</div>
           </div>
         </div>
+        <div class="demo-stack">
+          <span>Google Forms</span>
+          <span>Apps Script</span>
+          <span>LINE Messaging API</span>
+          <span>零費用維運</span>
+        </div>
+      </div>
+
+      <!-- 即將推出 -->
+      <div class="portfolio-grid" style="margin-top:32px;">
         <div class="portfolio-card">
           <div class="portfolio-img">
             <img src="assets/img/scene1-coffee.png" alt="烘焙工作室形象頁" />
